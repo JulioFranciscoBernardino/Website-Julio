@@ -1,22 +1,31 @@
 /* Estilos gerais */
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte Roboto (considere usar Google Fonts) */
+    display: flex; /* Define o corpo como um container flexbox */
+    flex-direction: column; /* Ordena os elementos na vertical */
+    min-height: 100vh; /* Define a altura mínima do corpo para ocupar toda a tela */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #181818; /* Fundo preto escuro */
-    color: #f0f0f0; /* Texto branco */
+    background-color: #181818;
+    color: #f0f0f0;
     line-height: 1.6;
   }
   
   /* Estilos para o topo */
   #topo {
-    background-color: #282828; /* Fundo cinza escuro */
+    background-color: #282828;
     padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Utiliza flex para o topo*/
+    display: flex; 
+    flex-direction: column; /* Ordena os elementos na vertical */
+    align-items: center; /* Centraliza os elementos horizontalmente */
   }
   
   /* Estilos para o header */
   header {
     text-align: center;
+    /* Adiciona espaço entre elementos */
+    margin-bottom: 20px;
   }
   
   #photo {
@@ -35,7 +44,7 @@ body {
   h2 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #e0e0e0; /* Título cinza claro */
+    color: #e0e0e0;
   }
   
   #script {
@@ -63,20 +72,21 @@ body {
   /* Estilos para a seção */
   section {
     padding: 20px;
-    color: #e0e0e0; /* Texto cinza claro na seção */
+    color: #e0e0e0;
   }
   
   /* Estilos para as figuras */
   .secao1, .secao2, .secao3, .secao4 {
-    display: inline-block;
+    display: flex; /* Define as figuras como flexbox */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
     margin: 10px;
-    text-align: center;
   }
   
   .secao1 img, .secao2 img, .secao3 img, .secao4 img {
     width: 50px;
     height: 50px;
-    filter: invert(1); /* Inverte as cores das imagens para um visual mais escuro */
+    filter: invert(1);
   }
   
   .secao1 figcaption, .secao2 figcaption, .secao3 figcaption, .secao4 figcaption {
@@ -85,7 +95,7 @@ body {
   
   /* Estilos para links */
   a {
-    color: #0099ff; /* Azul claro para links */
+    color: #0099ff;
     text-decoration: none;
   }
   
@@ -95,11 +105,44 @@ body {
   
   /* Estilos para o rodapé */
   #rodape {
-    background-color: #181818; /* Fundo preto */
-    color: #f0f0f0; /* Texto branco */
+    background-color: #181818;
+    color: #f0f0f0;
     padding: 20px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) { 
+    /* Estilos para telas pequenas */
+    #topo {
+      padding: 10px;
+    }
+  
+    #name {
+      font-size: 20px;
+    }
+  
+    #menu ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #menu li {
+      margin: 5px 0;
+    }
+  
+    .secao1, .secao2, .secao3, .secao4 {
+      display: flex;
+      flex-direction: column; /* Define as figuras como flexbox com elementos na vertical */
+      align-items: center; /* Centraliza os elementos horizontalmente */
+      margin-bottom: 10px;
+    }
+  
+    .secao1 img, .secao2 img, .secao3 img, .secao4 img {
+      width: 100%;
+      height: auto;
+    }
   }
