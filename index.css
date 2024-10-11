@@ -1,8 +1,8 @@
 /* Estilos gerais */
 body {
-    display: flex; /* Define o corpo como um container flexbox */
-    flex-direction: column; /* Ordena os elementos na vertical */
-    min-height: 100vh; /* Define a altura mínima do corpo para ocupar toda a tela */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: #181818;
@@ -15,22 +15,20 @@ body {
     background-color: #282828;
     padding: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-    /* Utiliza flex para o topo*/
     display: flex; 
-    flex-direction: column; /* Ordena os elementos na vertical */
-    align-items: center; /* Centraliza os elementos horizontalmente */
+    flex-direction: column;
+    align-items: center;
   }
   
   /* Estilos para o header */
   header {
     text-align: center;
-    /* Adiciona espaço entre elementos */
     margin-bottom: 20px;
   }
   
   #photo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-bottom: 20px;
   }
@@ -50,6 +48,7 @@ body {
   #script {
     font-size: 16px;
     text-align: justify;
+    text-align: center;
   }
   
   #script b {
@@ -63,34 +62,43 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    
   }
   
   #menu li {
     margin: 0 10px;
+    background: gray;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px black solid;
   }
   
   /* Estilos para a seção */
   section {
     padding: 20px;
     color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   /* Estilos para as figuras */
   .secao1, .secao2, .secao3, .secao4 {
-    display: flex; /* Define as figuras como flexbox */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
   }
   
-  .secao1 img, .secao2 img, .secao3 img, .secao4 img {
-    width: 50px;
-    height: 50px;
-    filter: invert(1);
+  .secao1 i, .secao2 i, .secao3 i, .secao4 i { /* Usa 'i' para os ícones do Font Awesome */
+    font-size: 30px; /* Define o tamanho dos ícones */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    color: #0099ff; /* Define a cor dos ícones */
   }
   
   .secao1 figcaption, .secao2 figcaption, .secao3 figcaption, .secao4 figcaption {
     margin-top: 5px;
+    text-align: center;
   }
   
   /* Estilos para links */
@@ -136,13 +144,12 @@ body {
   
     .secao1, .secao2, .secao3, .secao4 {
       display: flex;
-      flex-direction: column; /* Define as figuras como flexbox com elementos na vertical */
-      align-items: center; /* Centraliza os elementos horizontalmente */
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 10px;
     }
   
-    .secao1 img, .secao2 img, .secao3 img, .secao4 img {
-      width: 100%;
-      height: auto;
+    .secao1 i, .secao2 i, .secao3 i, .secao4 i { /* Define estilos para os ícones em telas pequenas */
+      font-size: 24px; /* Reduz o tamanho do ícone */
     }
   }
